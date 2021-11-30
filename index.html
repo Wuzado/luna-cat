@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>luna vibing</title>
+    <meta content="luna vibing!" property="og:title" />
+    <meta content="damn she vibing" property="og:description" />
+    <meta content="https://wuzado.com/luna-cat" property="og:url" />
+    <meta content="https://wuzado.com/luna-cat/luna_transparent.png" property="og:image" />
+    <meta content="#03e3fc" data-react-helmet="true" name="theme-color" />
+    <style>
+        body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+        }
+
+        #background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            margin: 0;
+            width: 100%;
+            background-color: rgb(245, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #caramelldansen {
+            z-index: 99;
+            display: flex;
+            color: black;
+            position: sticky;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="background">
+        <img src="luna_transparent.png" style="height: 100%" alt="luna the cat :)" />
+    </div>
+    <div id="caramelldansen">
+        enable autoplay! or click below, i guess
+        <audio autoplay controls src="caramelldansen.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+    </div>
+
+</body>
+
+<script>
+    var i = 0;
+    function change() {
+        var color = [
+            "#0000ff",
+            "#ff0000",
+            "#00ff00",
+            "#ff7f02",
+            "#ff00ff",
+            "#00ffff"
+        ];
+        document.getElementById("background").style.backgroundColor = color[i];
+        i = (i + 1) % color.length;
+    }
+    setInterval(change, 200);
+</script>
+
+</html>
